@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Bioimage analysis with Icy</title>
+    <title>Introduction to Icy</title>
     <meta charset="utf-8" />
     <meta name="author" content="Marion Louveaux" />
-    <meta name="date" content="2020-04-22" />
+    <meta name="date" content="2020-11-19" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css_neubias.css" type="text/css" />
+    <link rel="stylesheet" href="css_icy.css" type="text/css" />
     <link rel="stylesheet" href="cols.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Bioimage analysis with Icy
-## Webinar - NEUBIAS Academy <span class="citation">@Home</span>
+# Introduction to Icy
+## Biomedaqu summer school no. 3
 ### Marion Louveaux
-### <p>Institut Pasteur, Paris</p>
-<a href="https://marionlouveaux.github.io/bioimage_analysis_with_icy/" class="uri">https://marionlouveaux.github.io/bioimage_analysis_with_icy/</a>
-### 2020-04-22
+### Institut Pasteur, Paris
+### 2020-11-19
 
 ---
 
@@ -38,78 +37,130 @@ layout: true
   &lt;/div&gt;
 &lt;/div&gt;       
 
----
-
-
-# Introduction     
-        
-- Icy, a bioimage analysis software bridging people accross disciplines           
-- Protocols, making quantitative analyses accessible to everyone          
-- Community, get involved!            
-
----
-# Icy, a bioimage analysis software bridging people accross disciplines  
-
-Icy offers the means for 
-- perform quantitative analyses in a reproducible manner, even without programming knowledge            
-- get the latest image analysis and computer vision algorithms in an accessible manner         
-- easily share bioimage analysis workflows with the very diverse bioimage analysis community        
-
-
-&lt;img src="images/IntroIcy.png" width="5027" /&gt;
-
 
 
 ---
-# Protocols, making quantitative analyses accessible to everyone  
+# Icy, a bioimage analysis software    
 
-Protocols offers the means for       
-- automated processing without programming knowledge       
-- flexibility required to achieve complex tasks      
-- transparency and reproducibility       
-
-&lt;img src="images/IntroProtocols.png" width="5027" /&gt;
+&lt;img src="images/bioimage_analysis_workflow.png" width="2224" /&gt;
 
 
 ---
-# Community, get involved!  
+# Examples of Icy application to zebrafish
 
-Icy is a community effort, relying on:     
-- the existence and renewal/updating of resources      
-- communication around these resources      
-- sharing knowledge   
+**Quantitative analysis of fluorescence lifetime with the Icy plugin ROI intensity evolution**
 
-&lt;img src="images/IntroCommunity.png" width="5027" /&gt;
+&lt;img src="images/Andrews_ROI_Intensity_Evolution.png" width="5027" style="display: block; margin: auto;" /&gt;
+
+&gt; Andrews et al. J. Biophotonics 9, No. 4, 414–424 (2016)         
+http://icy.bioimageanalysis.org/plugin/roi-intensity-evolution/ 
+
+???
+OPT (optical projection tomography) imaging of zebrafish embryos (mounted in low melting agarose in FEP tubes with a bit of anaestetic) expressing FRET biosensor
+Analysis of fluorescence lifetime of the biosensor when cleaved by the Caspase 3 (apoptosis) with Matlab tool
+fluo lifetime data (fluo decay over time) given to Icy plugin used to compare irradiation conditions: count of the number of pixels above threshold -of decay-. Authors hijacked plugin which is meant to measure fluo intensity variations.
+
+
+---
+# Examples of Icy application to zebrafish
+
+**Correlative Light Electron Microscopy (CLEM) with the ec-CLEM plugin** 
+
+&lt;img src="images/CLEM_zebra.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+
+&gt; Wong et al., Developmental Cell 52, 1–17 (2020)          
+Kuri et al., J. Cell Biol. Vol. 216 No. 9 2891–2909 (2017)            
+http://icy.bioimageanalysis.org/plugin/ec-clem/        
+
+???
+Wong
+change chemokine levels in an inducible manner and measure
+the response of one collectively migrating tissue, the lateral
+line primordium
+Cxcr7b (receptor) is rapidly upregulated in response to elevated chemokine levels via a degradation-to-recycling intracellular trafficking switch
+CLEM to look at clusters of Cxcr7b receptors
+ In control embryos, the majority of
+Cxcr7b-GFP spots localized to multivesicular bodies (MVBs)
+and, to a lesser extent, the Golgi apparatus.
+In chemokineflooded embryos, there was a marked increase in Cxcr7b-GFP
+localization to tubulovesicular clusters, densities of small tubules
+and vesicles of 40–80 nm in diameter
+ tubulovesicular clusters
+are the source of the Cxcr7b increase during chemokine
+adaptation.
+
+Kuri 
+zebrafish larvae
+ASC protein, part of the inflammasome complex. Protein complex involved in the detection of danger or pathogenic stimuli by specific pattern-recognition receptors
+Localisation of Asc specks with CLEM, allow to discover its filamentous structure on the electron micrograph
 
 
 ---
-# Poll n°1
+# Examples of Icy application to zebrafish
 
-**Choose what applies to you most**           
-- I do image analysis for my projects only     
-- I do image analysis for the others only         
-- I do image analysis for myself and for the others        
+**Quantitative analysis of actin dynamics using the BioFlow plugin**
 
-**Your knowledge of Icy**
-- I never heard about Icy     
-- I heard about Icy but never used it      
-- I used Icy it a couple of times         
-- I used Icy many times       
+&lt;img src="images/zebra_bioflow_Grimaldi2020.png" width="5027" style="display: block; margin: auto;" /&gt;
 
----
-# Outline
+&gt; Grimaldi et al. Nature Communications 11:5397 (2020)            
+http://icy.bioimageanalysis.org/plugin/bioflow/         
 
-1. Icy, a bioimage analysis software bridging people accross disciplines                          
-2. Protocols, making quantitative analyses accessible to everyone                 
-3. Community, get involved!           
+???
+zebrafish primordial germ cells to study the role of cell-cell adhesion in bleb-driven single-cell migration in vivo.
+analysis of the actin flow with or without deregulating E-cadherin
+ 
+cell segmentation with active contours
+estimation of velocity fields within the cell (cytoplasm, actin or E-cadherin): extracting the motion of intracellular material observed using fuorescence microscopy (optical flow technique: displacement of pixels between image pairs, look at the changes of pixel intensities between image, assume there is no change in brightness), while simultaneously inferring the parameters of a given theoretical model of the cell interior (fuid dynamics model)
 
 ---
-# Icy: The origins of the Icy software      
+# Examples of Icy application to zebrafish
+
+**Unwrapping the aorta tube with the TubeSkinner plugin**         
+
+&lt;img src="images/zebra_tubeskinner_lancino2018.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+&gt; Lancino et al, eLife 2018;7:e37355 (2018)          
+http://icy.bioimageanalysis.org/plugin/tubeskinner/  
+
+???
+zebrafish embryos
+role of physical forces on the formation of blood stem cells. Study of the contraction of the aorta. Icy plugin unwraps the aorta tube, which helps to understand the imaged phenomenon and locate stem cells in the aorta
+
+
+       
+
+---
+# The origins of the Icy software      
 
 &lt;img src="images/Origins.png" width="5027" /&gt;
 
 ---
-# Icy: The choice of a developed &amp; unified GUI            
+# Icy now      
+
+
+**The Icy team**     
+
+- Maintain the kernel of Icy 2.0
+- Prepare the future of Icy        
+- Foster the community dynamic      
+    - Maintain the website: http://icy.bioimageanalysis.org/      
+    - Communicate around Icy     
+- The Icy team recently started "Icy Services", a commercial platform to provide services around Icy for industries and academics. See http://icy.bioimageanalysis.org/services/    
+
+&lt;img src="images/Current_kernel_developers.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+
+
+**Icy contributors outside the Icy team**      
+
+- Develop and maintain their plugins and protocols             
+- Report bugs and ask for feature requests on the kernel           
+- Help each other and users of their plugins                
+
+
+---
+# The choice of a developed &amp; unified GUI            
 
 &lt;img src="images/GUI.png" width="5027" /&gt;
 
@@ -129,7 +180,7 @@ Icy is a community effort, relying on:
       - Possibility to send bug reports and log files directly from the GUI       
 
 ---
-# Icy: Display options &amp; sequence properties        
+# Display options &amp; sequence properties        
          
 &lt;img src="images/GUIsidepane.png" width="5027" /&gt;
 
@@ -137,14 +188,14 @@ Icy is a community effort, relying on:
        
 
 ---
-# Icy: Viewer options 
+# Viewer options 
          
 &lt;img src="images/GUIviewer.png" width="5027" /&gt;
 
 &gt; Image: SAM_PI_Col-0.tif, from http://doi.org/10.5281/zenodo.2577053  
 
 ---
-# Icy: Windows synchronization         
+# Windows synchronization         
 
 ![:col_row 
 
@@ -159,28 +210,47 @@ Icy is a community effort, relying on:
 
 &gt; Image: SAM_PI_Col-0.tif, from http://doi.org/10.5281/zenodo.2577053  
 
----
-# Icy: Results            
-
-&lt;img src="images/ROIs.png" width="5027" /&gt;
-
-&gt; Image: image_1.tif, from https://zenodo.org/record/3706554#.XpgUbZk6-Uk 
 
 ---
-# Icy identity: Code      
+# Plugins and protocols
 
-&lt;img src="images/Plugins.png" width="5027" /&gt;
-&gt; http://icy.bioimageanalysis.org/download/     
+
+&lt;img src="images/plugins_protocol_definition.png" width="5027" /&gt;
+
+
 
 ---
-# Icy identity: Code  
+# A growing number of plugins and protocols     
+
+&lt;img src="images/Growing_plugins_number.png" width="5027" /&gt;
+
+
+
+---
+# Central repository for plugins and protocols  
 
 &lt;img src="images/Plugins2.png" width="5027" /&gt;
 
 &gt; http://icy.bioimageanalysis.org/plugins/
 
+
+
 ---
-# Icy: Highlighting some plugins    
+# A plugin example, the 3D rotation plugin          
+
+![:col_row 
+
+&lt;img src="images/3Drotationplugin.png" width="80%" /&gt;
+,
+
+&lt;img src="images/3D rotated view of SAM_PI_Col-0_0ms.gif" width="100%" /&gt;
+]
+
+&gt; http://icy.bioimageanalysis.org/plugin/3d-rotation/     
+ 
+
+---
+# Highlighting some key plugins    
 
 Counting spots with *Spot detector*             
 
@@ -206,22 +276,10 @@ extract motion of intracellular material observed using fluorescence
 microscopy, while simultaneously inferring the parameters of a given theoretical model 
 actin bulk flow   
 
----
-# Icy: 3D rotation plugin          
 
-![:col_row 
-
-&lt;img src="images/3Drotationplugin.png" width="80%" /&gt;
-,
-
-&lt;img src="images/3D rotated view of SAM_PI_Col-0_0ms.gif" width="100%" /&gt;
-]
-
-&gt; http://icy.bioimageanalysis.org/plugin/3d-rotation/     
- 
 
 ---
-# Icy: Protocols         
+# Protocols         
 
 &lt;img src="images/Protocols.png" width="5027" /&gt;
 
@@ -230,81 +288,7 @@ http://icy.bioimageanalysis.org/plugin/protocols/
 
 
 ---
-# Icy: Interoperability with other tools          
-
-&lt;img src="images/Interoperability.png" width="5027" /&gt;
-
-
----
-# Icy: Conclusions     
-
-- Unified graphical user interface       
-- Large variety of plugins
-- Graphical programming option        
-
-
----
-# Questions? 
-
-
----
-# Poll n°2
-
-**The 1st part of this webinar has...**       
-- ... triggered my interest for Icy     
-- ... not quite raised my interest for Icy yet         
-
-**Protocols and graphical programming (not limited to Icy)**     
-- I never heard about it    
-- I already heard about it but never tried       
-- I am familiar and have used it a couple of times          
-- I use it often        
-
-**Your knowledge in at least one programming language**        
-- zero programming knowlegde      
-- basic knowlegde      
-- intermediate knowlegde      
-- advanced knowledge          
-
----
-# Outline
-
-1. Icy, a bioimage analysis software bridging people accross disciplines                           
-2. Protocols, making quantitative analyses accessible to everyone                 
-3. Community, get involved!             
-
----
-# Protocols: Common issues     
-
-&lt;img src="images/AnalysesIssues.png" width="5027" /&gt;
-
----
-# Protocols: Definition of bioimage analysis    
-
-&lt;img src="images/bioimage_analysis_workflow.png" width="2224" /&gt;
-
----
-# Protocols: Example      
-
-&lt;img src="images/BiologicalQuestion.png" width="5027" /&gt;
-
-&lt;br&gt;
-&lt;br&gt;
-
-&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
-https://zenodo.org/record/3706554#.XpgUbZk6-Uk        
-
-
----
-# Protocols: Definition of workflow
-
-&lt;img src="images/WorkflowFormalisation.png" width="5027" /&gt;
-
-&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
-https://zenodo.org/record/3706554#.XpgUbZk6-Uk        
-
----
-# Protocols: A protocol is a workflow     
+# A protocol is a workflow     
 
 &lt;img src="images/WorkflowExampleFormalised.png" width="5027" /&gt;
 
@@ -313,51 +297,16 @@ https://zenodo.org/record/3706554#.XpgUbZk6-Uk
 
 
 ---
-# Protocols:  A protocol is a workflow   
+# A protocol is a workflow   
 
 &lt;img src="images/WorkflowExampleFormalisedwithLegends.png" width="5027" /&gt;
 
 &gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
-https://zenodo.org/record/3706554#.XpgUbZk6-Uk        
-
----
-# Protocols: Loading a protocol  
-
-**From the online Icy repository**    
-       
-&lt;iframe width="700" height="400" src="https://www.youtube.com/embed/YGaZC6trDWc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
-&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
-https://zenodo.org/record/3706554#.XpgUbZk6-Uk  
-
----
-# Protocols: Loading a protocol  
-
-**From a local repository**        
-
-&lt;iframe width="700" height="400" src="https://www.youtube.com/embed/guVS7Vq7-ZQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
-&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
-https://zenodo.org/record/3706554#.XpgUbZk6-Uk  
-
----
-# Protocols: Getting started           
-
-&lt;iframe width="700" height="400" src="https://www.youtube.com/embed/jDvWOU_Actk?list=PLTzQ6G6h35v-QMfXPnzm8Tfcm_T09KwBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
-&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
-https://zenodo.org/record/3706554#.XpgUbZk6-Uk  
+https://zenodo.org/record/3706554#.XpgUbZk6-Uk
 
 
 ---
-# Protocols: Getting started           
-
-
-&lt;img src="images/ProtocolBasics.png" width="5027" /&gt;
-
-
----
-# Protocols: Add a block           
+# How to add a block           
 
 
 &lt;iframe width="700" height="400" src="https://www.youtube.com/embed/3OhFIF8wOnc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
@@ -366,50 +315,16 @@ https://zenodo.org/record/3706554#.XpgUbZk6-Uk
 https://zenodo.org/record/3706554#.XpgUbZk6-Uk  
 
 ---
-# Protocols: Run the protocol           
+# How to run the protocol           
 
 
 &lt;iframe width="700" height="400" src="https://www.youtube.com/embed/OVoGznelsEQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
 &gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
-https://zenodo.org/record/3706554#.XpgUbZk6-Uk  
+https://zenodo.org/record/3706554#.XpgUbZk6-Uk 
 
 ---
-# Protocols: Automation - Batch processing             
-
-
-&lt;img src="images/Batch.png" width="5027" /&gt;
-
-&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
-https://zenodo.org/record/3706554#.XpgUbZk6-Uk  
-
----
-# Protocols: Automation - Headless mode              
-
-&lt;iframe width="700" height="400" src="https://www.youtube.com/embed/KI57cNbGDyg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
-&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
-https://zenodo.org/record/3706554#.XpgUbZk6-Uk  
-
----
-# Protocols: Flexibility   
-
-&lt;img src="images/ProtocolFlexibility.png" width="5027" /&gt;
-&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
-https://zenodo.org/record/3706554#.XpgUbZk6-Uk  
-
----
-# Protocols: Flexibility          
-
-Workflow block to organize other blocks        
-
-&lt;iframe width="700" height="400" src="https://www.youtube.com/embed/YOvG5D7Kf78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
-&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
-https://zenodo.org/record/3706554#.XpgUbZk6-Uk  
-
----
-# Protocols: Ethics and Reproducibility     
+# Ethics and Reproducibility with protocols     
 
 **Transparency** 
 - Steps of the workflow are visible      
@@ -418,84 +333,44 @@ https://zenodo.org/record/3706554#.XpgUbZk6-Uk
 **Reproducibility**
 - Automated analysis    
 
-**Tips**        
 =&gt; Add a DOI with Zenodo on your protocol and test data    
-=&gt; Share your protocol on the Icy website, add documentation and link to test data          
+=&gt; Share your protocol in your publication &amp; on the Icy website, add documentation &amp; link to test data          
 
 
 &lt;img src="images/Ethics.png" width="5027" /&gt;
 
+&gt; http://icy.bioimageanalysis.org/tutorial/how-to-publish-a-protocol/ 
 
 ---
-# Protocols: Conclusions                
+# Results visualisation and manipulation            
 
-- Automation without programming knowledge            
-- Yet flexible      
-- Reproducible and transparent    
+&lt;img src="images/ROIs.png" width="5027" /&gt;
 
----
-# Questions? 
+&gt; Image: image_1.tif, from https://zenodo.org/record/3706554#.XpgUbZk6-Uk 
 
-
----
-# Poll n°3
-
-**The 2nd part of the webinar has...**       
-- ... triggered my interest for protocols        
-- ... not quite yet raised my interest for protocols        
-
-**I find graphical programming...**      
-- easier than regular programming     
-- as difficult as regular programming     
-- harder than regular programming           
-
----
-# Outline
-
-1. Icy, a bioimage analysis software bridging people accross disciplines                           
-2. Protocols, making quantitative analyses accessible to everyone                 
-3. Community, get involved!                   
 
 
 ---
-# Community: From lab effort to community effort      
+# Interoperability with other tools          
 
-&lt;img src="images/Community.png" width="5027" /&gt;
-
-
----
-# Community: The Icy team      
-
-**Community involvement**     
-
-- Maintain Icy 2.0
-
-- Prepare the future of Icy        
-
-- Foster the community dynamic      
-    - Maintain the website     
-    - Communicate around Icy     
-
-&lt;br&gt;      
-      
-**Other missions**   
-        
-The Icy team recently started "Icy Services", a commercial platform to provide services around Icy for industrials and academics. See http://icy.bioimageanalysis.org/services/       
+&lt;img src="images/Interoperability.png" width="5027" /&gt;
 
 
 ---
-# Community: Resources      
+# Icy resources      
 
 
 &lt;img src="images/Resources.png" width="100%" /&gt;
 
 ---
-# Community: Communication      
+# How to cite Icy?   
 
 *In scientific publications* 
 - **Cite Icy**: de Chaumont et al. Icy: an open bioimage informatics platform for extended reproducible research. Nat Methods 9, 690–696 (2012). https://doi.org/10.1038/nmeth.2075   
 - **Cite the plugins** you use: reference in the online documentation     
-- **Publish your protocol**: upload it on the Icy website, add a snapshot in the supplementals, link to test data                   
+- **Publish your protocol**: upload it on the Icy website, add a snapshot in the supplementals, link to test data    
+
+&lt;br&gt;
 
 *On Twitter*    
 Did you publish recently a paper using Icy? Did follow a course on Icy ? Do you have a favorite plugin? Are you proud of your last protocol? **Share** it!      
@@ -507,67 +382,24 @@ In your tweets:
 **Follow @Icy_Bioimaging** to get news from the Icy team.             
 
 ---
-# Community: Help on Icy related topics           
+# How to get help &amp; report bugs?           
 
 **Looking for help**   
 
 1. Read the online plugins documentation http://icy.bioimageanalysis.org/ 
 2. Read the training materials http://icy.bioimageanalysis.org/trainings/            
-3. Search the forums https://forum.image.sc/ and http://icy.bioimageanalysis.org/topics/     
+3. Search the forums https://forum.image.sc/  
 
 
 **Still looking for help?**    
 
-Right now, you can still ask questions here:  http://icy.bioimageanalysis.org/topics/     
-*but* we are in the process of joining the https://forum.image.sc/ as community partners, more info soon...  
-
-
-**Helping others**       
-Anybody can give help, no need to be an expert. Be active on the forum(s) as helper!     
+Create a new topic on the image.sc forum: https://forum.image.sc/ 
+&lt;img src="images/2020-04-15_forum_imagesc_newtopic.PNG" width="75%" style="display: block; margin: auto;" /&gt;
+    
 
 
 ---
-# Community: Conclusions      
-
-- Getting involved in the Icy community starts with communicating about the Icy resources you use: cite, tweet...       
-- The community involvement is crucial    
-
-
----
-# Questions? 
-
-
-
----
-# Poll n°4
-
-**Following part 3, in the next 6 months, I am likely to... (tick all the ones that apply to you)**
-- try Icy at least once     
-- use Icy on a regular basis       
-- cite Icy        
-- tweet about Icy     
-- go back to this presentation      
-- submit a protocol on the Icy website     
-- teach how to use Icy      
-- ask for help      
-- help others               
-
-
-
----
-# Acknowledgements 
-
-Big big thanks to: 
-- NEUBIAS and NEUBIAS Academy              
-- Moderators: Julien Colombelli, Ofra Golani, Rocco D'Antuono, Stéphane Dallongeville and Daniel Felipe Gonzalez Obando             
-- Icy team     
-- Jessica Quintin, Stéphane Rigaud, Stéphane Verger, Maria Manich and David Gaboriau for images and protocols       
-
-
-Don't forget to register to the other **NEUBIAS Academy @home** events!!      
-http://eubias.org/NEUBIAS/training-schools/neubias-academy-home/ 
-
-Please fill the satisfaction **survey**.
+# Questions?
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -616,6 +448,32 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -633,17 +491,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {

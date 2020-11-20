@@ -1,11 +1,11 @@
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-## Bioimage analysis with Icy
+## Introduction to Icy
 
-This repository contains the slides needed for the webinar "Bioimage analysis with Icy" given by Marion Louveaux for the [NEUBIAS Academy @home in 2020](eubias.org/NEUBIAS/training-schools/neubias-academy-home/).      
+This repository contains the slides for the "Introduction to Icy" given by Marion Louveaux at the [Biomedaqu summer school no. 3](https://www.gigabiomedaqu.uliege.be/cms/c_5269470/en/biomedaqu-course-3rd-summer-school).      
 [Icy](http://icy.bioimageanalysis.org/) is a bioimage analysis software.    
 
-See slides directly: https://marionlouveaux.github.io/bioimage_analysis_with_icy/   
+See slides directly: https://marionlouveaux.github.io/icy_introduction_for_Biomedaqu2020/   
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
 
@@ -19,7 +19,4 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 
 ## Acknowledgements    
 
-- NEUBIAS and NEUBIAS Academy              
-- Moderators: Ofra Golani, Rocco D'Antuono, Stéphane Dallongeville and Daniel Felipe Gonzalez Obando             
-- Icy team     
-- Jessica Quintin, Stéphane Rigaud, Stéphane Verger, Maria Manich and David Gaboriau for images and protocols 
+Many thanks to Sing-E Lee and Raphael Marée for the invitation.    
