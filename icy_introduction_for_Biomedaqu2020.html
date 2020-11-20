@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introduction to Icy</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Marion Louveaux" />
+    <meta name="date" content="2020-11-19" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css_icy.css" type="text/css" />
+    <link rel="stylesheet" href="cols.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Introduction to Icy
+## Biomedaqu summer school no. 3
+### Marion Louveaux
+### Institut Pasteur, Paris
+### 2020-11-19
+
+---
+
+
+
+
+layout: true
+
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;
+  &lt;div class="my-info"&gt;
+      &lt;a href="https://marionlouveaux.fr/"&gt;marionlouveaux.fr&lt;/a&gt;
+      &lt;a href="https://twitter.com/MarionLouveaux"&gt;@MarionLouveaux&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="my-logo"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;       
+
+
+
+---
+# Icy, a bioimage analysis software    
+
+&lt;img src="images/bioimage_analysis_workflow.png" width="2224" /&gt;
+
+
+---
+# Examples of Icy application to zebrafish
+
+**Quantitative analysis of fluorescence lifetime with the Icy plugin ROI intensity evolution**
+
+&lt;img src="images/Andrews_ROI_Intensity_Evolution.png" width="5027" style="display: block; margin: auto;" /&gt;
+
+&gt; Andrews et al. J. Biophotonics 9, No. 4, 414–424 (2016)         
+http://icy.bioimageanalysis.org/plugin/roi-intensity-evolution/ 
+
+???
+OPT (optical projection tomography) imaging of zebrafish embryos (mounted in low melting agarose in FEP tubes with a bit of anaestetic) expressing FRET biosensor
+Analysis of fluorescence lifetime of the biosensor when cleaved by the Caspase 3 (apoptosis) with Matlab tool
+fluo lifetime data (fluo decay over time) given to Icy plugin used to compare irradiation conditions: count of the number of pixels above threshold -of decay-. Authors hijacked plugin which is meant to measure fluo intensity variations.
+
+
+---
+# Examples of Icy application to zebrafish
+
+**Correlative Light Electron Microscopy (CLEM) with the ec-CLEM plugin** 
+
+&lt;img src="images/CLEM_zebra.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+
+&gt; Wong et al., Developmental Cell 52, 1–17 (2020)          
+Kuri et al., J. Cell Biol. Vol. 216 No. 9 2891–2909 (2017)            
+http://icy.bioimageanalysis.org/plugin/ec-clem/        
+
+???
+Wong
+change chemokine levels in an inducible manner and measure
+the response of one collectively migrating tissue, the lateral
+line primordium
+Cxcr7b (receptor) is rapidly upregulated in response to elevated chemokine levels via a degradation-to-recycling intracellular trafficking switch
+CLEM to look at clusters of Cxcr7b receptors
+ In control embryos, the majority of
+Cxcr7b-GFP spots localized to multivesicular bodies (MVBs)
+and, to a lesser extent, the Golgi apparatus.
+In chemokineflooded embryos, there was a marked increase in Cxcr7b-GFP
+localization to tubulovesicular clusters, densities of small tubules
+and vesicles of 40–80 nm in diameter
+ tubulovesicular clusters
+are the source of the Cxcr7b increase during chemokine
+adaptation.
+
+Kuri 
+zebrafish larvae
+ASC protein, part of the inflammasome complex. Protein complex involved in the detection of danger or pathogenic stimuli by specific pattern-recognition receptors
+Localisation of Asc specks with CLEM, allow to discover its filamentous structure on the electron micrograph
+
+
+---
+# Examples of Icy application to zebrafish
+
+**Quantitative analysis of actin dynamics using the BioFlow plugin**
+
+&lt;img src="images/zebra_bioflow_Grimaldi2020.png" width="5027" style="display: block; margin: auto;" /&gt;
+
+&gt; Grimaldi et al. Nature Communications 11:5397 (2020)            
+http://icy.bioimageanalysis.org/plugin/bioflow/         
+
+???
+zebrafish primordial germ cells to study the role of cell-cell adhesion in bleb-driven single-cell migration in vivo.
+analysis of the actin flow with or without deregulating E-cadherin
+ 
+cell segmentation with active contours
+estimation of velocity fields within the cell (cytoplasm, actin or E-cadherin): extracting the motion of intracellular material observed using fuorescence microscopy (optical flow technique: displacement of pixels between image pairs, look at the changes of pixel intensities between image, assume there is no change in brightness), while simultaneously inferring the parameters of a given theoretical model of the cell interior (fuid dynamics model)
+
+---
+# Examples of Icy application to zebrafish
+
+**Unwrapping the aorta tube with the TubeSkinner plugin**         
+
+&lt;img src="images/zebra_tubeskinner_lancino2018.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+&gt; Lancino et al, eLife 2018;7:e37355 (2018)          
+http://icy.bioimageanalysis.org/plugin/tubeskinner/  
+
+???
+zebrafish embryos
+role of physical forces on the formation of blood stem cells. Study of the contraction of the aorta. Icy plugin unwraps the aorta tube, which helps to understand the imaged phenomenon and locate stem cells in the aorta
+
+
+       
+
+---
+# The origins of the Icy software      
+
+&lt;img src="images/Origins.png" width="5027" /&gt;
+
+---
+# Icy now      
+
+
+**The Icy team**     
+
+- Maintain the kernel of Icy 2.0
+- Prepare the future of Icy        
+- Foster the community dynamic      
+    - Maintain the website: http://icy.bioimageanalysis.org/      
+    - Communicate around Icy     
+- The Icy team recently started "Icy Services", a commercial platform to provide services around Icy for industries and academics. See http://icy.bioimageanalysis.org/services/    
+
+&lt;img src="images/Current_kernel_developers.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+
+
+**Icy contributors outside the Icy team**      
+
+- Develop and maintain their plugins and protocols             
+- Report bugs and ask for feature requests on the kernel           
+- Help each other and users of their plugins                
+
+
+---
+# The choice of a developed &amp; unified GUI            
+
+&lt;img src="images/GUI.png" width="5027" /&gt;
+
+&gt; Image: SAM_PI_Col-0.tif, from http://doi.org/10.5281/zenodo.2577053   
+
+???
+1. A unified graphical user interface       
+      - No floating windows      
+      - Unified plugins layout     
+      - Condensed information (see the side pane)
+2. Everything at your fingertips
+      - Ribbon menu: quick access to basic operations &amp; main plugins      
+      - Side pane: display options, ROI manager with result table, overlays control, history and log window       
+3. Make the software easier to use       
+      - Search bar: access all tools, even if not yet installed
+      - Direct access to online documentation &amp; website     
+      - Possibility to send bug reports and log files directly from the GUI       
+
+---
+# Display options &amp; sequence properties        
+         
+&lt;img src="images/GUIsidepane.png" width="5027" /&gt;
+
+&gt; Image: SAM_PI_Col-0.tif, from http://doi.org/10.5281/zenodo.2577053  
+       
+
+---
+# Viewer options 
+         
+&lt;img src="images/GUIviewer.png" width="5027" /&gt;
+
+&gt; Image: SAM_PI_Col-0.tif, from http://doi.org/10.5281/zenodo.2577053  
+
+---
+# Windows synchronization         
+
+![:col_row 
+
+&lt;img src="images/GUIsynchroviewer.png" width="100%" /&gt;
+]  
+![:col_row 
+&lt;center&gt;
+&lt;iframe width="400" height="250" src="https://www.youtube.com/embed/EQyM1UQw4xc?list=PLTzQ6G6h35v9fC0tkJ_2ZNLfm5SN1ZLlv" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;
+
+]
+
+&gt; Image: SAM_PI_Col-0.tif, from http://doi.org/10.5281/zenodo.2577053  
+
+
+---
+# Plugins and protocols
+
+
+&lt;img src="images/plugins_protocol_definition.png" width="5027" /&gt;
+
+
+
+---
+# A growing number of plugins and protocols     
+
+&lt;img src="images/Growing_plugins_number.png" width="5027" /&gt;
+
+
+
+---
+# Central repository for plugins and protocols  
+
+&lt;img src="images/Plugins2.png" width="5027" /&gt;
+
+&gt; http://icy.bioimageanalysis.org/plugins/
+
+
+
+---
+# A plugin example, the 3D rotation plugin          
+
+![:col_row 
+
+&lt;img src="images/3Drotationplugin.png" width="80%" /&gt;
+,
+
+&lt;img src="images/3D rotated view of SAM_PI_Col-0_0ms.gif" width="100%" /&gt;
+]
+
+&gt; http://icy.bioimageanalysis.org/plugin/3d-rotation/     
+ 
+
+---
+# Highlighting some key plugins    
+
+Counting spots with *Spot detector*             
+
+&lt;img src="images/SpotDetector.png" width="80%" /&gt;
+
+![:col_row Segmentation with &lt;i&gt;Active contours&lt;/i&gt;, Tracking with &lt;i&gt;Track Manager&lt;/i&gt;, Flow analysis with &lt;i&gt;BioFlow&lt;/i&gt;]
+![:col_row 
+&lt;img src="images/active_contours_video.gif" width="75%" /&gt;
+,
+&lt;img src="images/221219-ICY-MOVIES - 25X 54 (crop)_TrackingAmoeba.gif" width="100%" /&gt;
+,
+&lt;img src="images/bioflow_2D.gif" width="100%" /&gt;
+]         
+![:col_row Credits: D. Gaboriau, Credits: M. Manich, Boquet-Pujadas et al. (2017)]
+
+&gt; http://icy.bioimageanalysis.org/plugin/spot-detector/         
+http://icy.bioimageanalysis.org/plugin/active-contours/          
+http://icy.bioimageanalysis.org/plugin/track-manager/         
+http://icy.bioimageanalysis.org/plugin/bioflow/        
+
+???
+extract motion of intracellular material observed using fluorescence
+microscopy, while simultaneously inferring the parameters of a given theoretical model 
+actin bulk flow   
+
+
+
+---
+# Protocols         
+
+&lt;img src="images/Protocols.png" width="5027" /&gt;
+
+&gt; http://icy.bioimageanalysis.org/protocol/3d-mouse-embryo-quantification/         
+http://icy.bioimageanalysis.org/plugin/protocols/       
+
+
+---
+# A protocol is a workflow     
+
+&lt;img src="images/WorkflowExampleFormalised.png" width="5027" /&gt;
+
+&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
+https://zenodo.org/record/3706554#.XpgUbZk6-Uk        
+
+
+---
+# A protocol is a workflow   
+
+&lt;img src="images/WorkflowExampleFormalisedwithLegends.png" width="5027" /&gt;
+
+&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
+https://zenodo.org/record/3706554#.XpgUbZk6-Uk
+
+
+---
+# How to add a block           
+
+
+&lt;iframe width="700" height="400" src="https://www.youtube.com/embed/3OhFIF8wOnc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
+https://zenodo.org/record/3706554#.XpgUbZk6-Uk  
+
+---
+# How to run the protocol           
+
+
+&lt;iframe width="700" height="400" src="https://www.youtube.com/embed/OVoGznelsEQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&gt; http://icy.bioimageanalysis.org/protocol/cell-fluorescence-quantification/           
+https://zenodo.org/record/3706554#.XpgUbZk6-Uk 
+
+---
+# Ethics and Reproducibility with protocols     
+
+**Transparency** 
+- Steps of the workflow are visible      
+- All steps and corresponding parameters are stored in the .xml 
+
+**Reproducibility**
+- Automated analysis    
+
+=&gt; Add a DOI with Zenodo on your protocol and test data    
+=&gt; Share your protocol in your publication &amp; on the Icy website, add documentation &amp; link to test data          
+
+
+&lt;img src="images/Ethics.png" width="5027" /&gt;
+
+&gt; http://icy.bioimageanalysis.org/tutorial/how-to-publish-a-protocol/ 
+
+---
+# Results visualisation and manipulation            
+
+&lt;img src="images/ROIs.png" width="5027" /&gt;
+
+&gt; Image: image_1.tif, from https://zenodo.org/record/3706554#.XpgUbZk6-Uk 
+
+
+
+---
+# Interoperability with other tools          
+
+&lt;img src="images/Interoperability.png" width="5027" /&gt;
+
+
+---
+# Icy resources      
+
+
+&lt;img src="images/Resources.png" width="100%" /&gt;
+
+---
+# How to cite Icy?   
+
+*In scientific publications* 
+- **Cite Icy**: de Chaumont et al. Icy: an open bioimage informatics platform for extended reproducible research. Nat Methods 9, 690–696 (2012). https://doi.org/10.1038/nmeth.2075   
+- **Cite the plugins** you use: reference in the online documentation     
+- **Publish your protocol**: upload it on the Icy website, add a snapshot in the supplementals, link to test data    
+
+&lt;br&gt;
+
+*On Twitter*    
+Did you publish recently a paper using Icy? Did follow a course on Icy ? Do you have a favorite plugin? Are you proud of your last protocol? **Share** it!      
+
+In your tweets: 
+- **@Icy_Bioimaging** to notify the Icy team            
+- **#BioimageAnalysis**, automatic retweet by the Twitter bot @Talk_BioImg
+
+**Follow @Icy_Bioimaging** to get news from the Icy team.             
+
+---
+# How to get help &amp; report bugs?           
+
+**Looking for help**   
+
+1. Read the online plugins documentation http://icy.bioimageanalysis.org/ 
+2. Read the training materials http://icy.bioimageanalysis.org/trainings/            
+3. Search the forums https://forum.image.sc/  
+
+
+**Still looking for help?**    
+
+Create a new topic on the image.sc forum: https://forum.image.sc/ 
+&lt;img src="images/2020-04-15_forum_imagesc_newtopic.PNG" width="75%" style="display: block; margin: auto;" /&gt;
+    
+
+
+---
+# Questions?
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="cols_macro.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
